@@ -1,3 +1,4 @@
+":call dein#install() でinstallする
 if &compatible
       set nocompatible
       endif
@@ -23,9 +24,14 @@ set softtabstop=4
 set expandtab
 set list
 set listchars=tab:»-,trail:-
-
+set incsearch
 set autoindent
 set smartindent
+set statusline+=%<%F
+
+set laststatus=2
+set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
+set statusline+=%y
 
 syntax on
 set hlsearch!
@@ -40,4 +46,5 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 noremap ; :
 noremap : ;
 
-
+noremap <buffer> ,ptv <Esc>:'<,'>! perltidy -pbp<CR>
+noremap <buffer> ,pt :%! perltidy<CR>
