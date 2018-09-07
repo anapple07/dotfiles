@@ -33,6 +33,11 @@ set laststatus=2
 set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
 set statusline+=%y
 
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
+endfor
+
 syntax on
 set hlsearch!
 
