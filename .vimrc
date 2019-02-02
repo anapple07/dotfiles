@@ -33,6 +33,8 @@ set laststatus=2
 set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
 set statusline+=%y
 
+set guifont=Andale\ Mono:h14
+
 set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
