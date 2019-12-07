@@ -27,6 +27,8 @@ syntax on
 set hlsearch!
 
 set t_Co=256
+set termguicolors
+set background=dark
 
 inoremap { {}<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
