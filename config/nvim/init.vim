@@ -1,48 +1,5 @@
-set number
-set encoding=utf-8
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set list
-set listchars=tab:»-,trail:-
-set incsearch
-set autoindent
-set smartindent
-set statusline+=%<%F
-set showcmd
-set wildmenu
-set wildmode=list:longest
-
-set laststatus=2
-set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
-set statusline+=%y
-
-set guifont=Andale\ Mono:h14
-
-set completeopt=menuone
-for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
-  exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
-endfor
-
-
-syntax on
-set hlsearch!
-
-set t_Co=256
-set termguicolors
-set background=dark
-
-inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
-
-noremap ; :
-noremap : ;
-
-noremap <buffer> ,ptv <Esc>:'<,'>! perltidy -pbp<CR>
-noremap <buffer> ,pt :%! perltidy<CR>
+"これで動くの??
+source ~/dotfiles/settings/myvimrc
 
 "#####dein.vimの設定#####
 if &compatible
