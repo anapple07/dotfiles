@@ -1,1 +1,1 @@
-source ~/dotfile/.myrc
+source ~/dotfiles/config/settings/.myrc
