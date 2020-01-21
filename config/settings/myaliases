@@ -1,0 +1,6 @@
+alias fs='sudo find . -name ".*.sw*"'
+alias fsd='sudo find . -name ".*.sw*"|xargs rm'
+alias bb='git bs'
+alias al='git commit --allow-empty'
+alias co='git commit -v'
+alias ad='git add'
