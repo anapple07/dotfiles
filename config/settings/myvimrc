@@ -1,0 +1,26 @@
+set number
+set encoding=utf-8
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set list
+set listchars=tab:»-,trail:-
+set incsearch
+set autoindent
+set smartindent
+set showcmd
+set wildmenu
+set wildmode=list:longest
+
+set laststatus=2
+set statusline+=%y
+
+set guifont=Andale\ Mono:h14
+
+set hlsearch!
+
+set t_Co=256
+set termguicolors
+set background=dark
+
