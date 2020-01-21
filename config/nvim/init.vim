@@ -10,6 +10,9 @@ set incsearch
 set autoindent
 set smartindent
 set statusline+=%<%F
+set showcmd
+set wildmenu
+set wildmode=list:longest
 
 set laststatus=2
 set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
