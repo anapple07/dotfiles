@@ -22,6 +22,15 @@ repo = 'Shougo/neosnippet'
 repo = 'tomasr/molokai'
 
 [[plugins]]
+repo = 'junegunn/vim-easy-align'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'preservim/nerdtree'
+
+[[plugins]]
 repo = 'junegunn/fzf'
 build = './install --bin'
 merged = '0'

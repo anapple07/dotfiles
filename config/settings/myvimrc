@@ -24,3 +24,5 @@ set t_Co=256
 set termguicolors
 set background=dark
 
+autocmd vimenter * NERDTree
+map <C-t> :NERDTreeToggle<CR>
