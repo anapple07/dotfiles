@@ -21,7 +21,6 @@ set guifont=Andale\ Mono:h14
 set hlsearch!
 
 set t_Co=256
-set termguicolors
 set background=dark
 
 autocmd vimenter * NERDTree
