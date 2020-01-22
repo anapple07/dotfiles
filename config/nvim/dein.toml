@@ -29,6 +29,10 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'preservim/nerdtree'
+hook_add = '''
+    map <C-t> :NERDTreeToggle<CR>
+    let g:NERDTreeQuitOnOpen = 1
+'''
 
 [[plugins]]
 repo = 'junegunn/fzf'

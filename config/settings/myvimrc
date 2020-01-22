@@ -23,4 +23,3 @@ set hlsearch!
 set t_Co=256
 set background=dark
 
-map <C-t> :NERDTreeToggle<CR>
