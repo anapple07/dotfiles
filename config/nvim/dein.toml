@@ -30,7 +30,7 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'preservim/nerdtree'
 hook_add = '''
-    map <C-t> :NERDTreeToggle<CR>
+    map <C-i> :NERDTreeToggle<CR>
     let g:NERDTreeQuitOnOpen = 1
 '''
 
