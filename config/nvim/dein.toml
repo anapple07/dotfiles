@@ -35,6 +35,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'vim-scripts/taglist.vim'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
     let g:lightline = {'colorscheme': 'jellybeans'}
