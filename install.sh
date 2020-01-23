@@ -11,10 +11,10 @@ if [ $1 = git ]; then
     wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 fi
 
-#ln -fs $HOME/dotfiles/.vimrc ~/.vimrc
 ln -fs $HOME/dotfiles/config/bash/.bashrc ~/.bashrc
 ln -fs $HOME/dotfiles/config/bash/.bash_profile ~/.bash_profile
 ln -fs $HOME/dotfiles/config/zsh/.zsh_profile ~/.zsh_profile
+ln -fs $HOME/dotfiles/config/zsh/.vimrc ~/.vimrc
 source ~/.bashrc
 
 echo 'Setup End'
