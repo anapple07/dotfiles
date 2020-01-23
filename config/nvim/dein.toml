@@ -1,6 +1,9 @@
 
 [[plugins]]
 repo = 'Shougo/dein.vim'
+hook_add = '''
+    source ~/dotfiles/config/settings/myvimrc
+'''
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'

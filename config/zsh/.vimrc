@@ -1,4 +1,3 @@
-source ~/dotfiles/config/settings/myvimrc
 if filereadable('~/.local_vimrc')
   source ~/.local_vimrc
 endif

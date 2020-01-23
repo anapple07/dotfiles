@@ -1,6 +1,3 @@
-"これで動くの??
-source ~/dotfiles/settings/myvimrc
-
 "#####dein.vimの設定#####
 if &compatible
   set nocompatible
