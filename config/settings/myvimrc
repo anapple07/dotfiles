@@ -33,6 +33,7 @@ inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
-nnoremap <C-n> :tabnew<CR>
 "tagjamp
 nnoremap tt :tab sp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap to :tabo<CR>
+nnoremap tn :tabnew<CR>
