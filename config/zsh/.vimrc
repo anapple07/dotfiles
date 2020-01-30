@@ -1,4 +1,4 @@
-if filereadable('~/.local_vimrc')
+if filereadable($HOME.'/.local_vimrc')
   source ~/.local_vimrc
 endif
 
