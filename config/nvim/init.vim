@@ -4,17 +4,12 @@ if &compatible
 endif
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state(expand('~/.vim/dein'))
-    call dein#begin(expand('~/.vim/dein'))
-
-    " プラグインリストを収めたTOMLファイル
-    let g:dein_dir = expand('~/.config/nvim')
-    let s:toml = g:dein_dir . '/dein.toml'
-    let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
+if dein#load_state(expand('~/.cache/dein'))
+    call dein#begin(expand('~/.cache/dein'))
 
     " TOMLファイルにpluginを記述
-    call dein#load_toml(s:toml, {'lazy': 0})
-    call dein#load_toml(s:lazy_toml, {'lazy': 1})
+    call dein#load_toml('~/dotfiles/config/nvim/dein.toml', {'lazy': 0})
+    call dein#load_toml('~/dotfiles/config/nvim/dein_lazy.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()
