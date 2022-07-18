@@ -15,6 +15,6 @@ ln -fs $HOME/dotfiles/config/bash/.bashrc ~/.bashrc
 ln -fs $HOME/dotfiles/config/bash/.bash_profile ~/.bash_profile
 ln -fs $HOME/dotfiles/config/zsh/.zsh_profile ~/.zsh_profile
 ln -fs $HOME/dotfiles/config/zsh/.vimrc ~/.vimrc
-source ~/.bashrc
+source ~/.zshrc
 
 echo 'Setup End'

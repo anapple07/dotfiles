@@ -12,7 +12,7 @@ if dein#load_state(expand('~/.vim/dein'))
     call dein#begin(expand('~/.vim/dein'))
 
     " プラグインリストを収めたTOMLファイル
-    let g:dein_dir = expand('~/.config/nvim')
+    let g:dein_dir = expand('~/dotfiles/config/nvim')
     let s:toml = g:dein_dir . '/dein.toml'
     let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
 
