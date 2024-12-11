@@ -38,3 +38,12 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 nnoremap tt :tab sp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap to :tabo<CR>
 nnoremap tn :tabnew<CR>
+
+noremap <buffer> ,ptv <Esc>:'<,'>! perltidy<CR>
+noremap <buffer> ,pt :%! perltidy<CR>
+
+set completeopt=menuone
+set backspace=indent,eol,start
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+    exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
+endfor
