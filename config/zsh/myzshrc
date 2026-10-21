@@ -1,0 +1,49 @@
+# ~/.zshrc の最後（oh-my-zsh を読み込んだ後）で source する
+
+# agnoster: 自分のユーザーなら user@host を出さない
+DEFAULT_USER=$USER
+
+# agnoster: git ブランチを2行目に表示
+build_prompt() {
+  RETVAL=$?
+  prompt_status
+  prompt_virtualenv
+  prompt_aws
+  prompt_terraform
+  prompt_context
+  prompt_dir
+  prompt_end
+  print -n '\n'
+  CURRENT_BG='NONE'
+  prompt_git
+  prompt_bzr
+  prompt_hg
+  if [[ $CURRENT_BG == 'NONE' ]]; then
+    print -n '%{%k%f%}'
+  else
+    prompt_end
+  fi
+}
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# fzf（dein の junegunn/fzf で ~/.fzf に入る）
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+(( $+commands[direnv] )) && eval "$(direnv hook zsh)"
+(( $+commands[mise] )) && eval "$(mise activate zsh)"
+
+# Claude のアカウントB（~/.claude-b）のときは tmux のステータスバーを紫にする
+_claude_tmux_color() {
+  [[ -n $TMUX ]] || return
+  if [[ $CLAUDE_CONFIG_DIR == $HOME/.claude-b ]]; then
+    tmux set status-style 'bg=colour91,fg=colour255'
+  else
+    tmux set -u status-style
+  fi
+}
+precmd_functions+=(_claude_tmux_color)
+
+# alias: 共通 → この PC 専用（~/.aliases_local は dotfiles に入れない）
+[ -f ~/dotfiles/config/settings/myaliases ] && source ~/dotfiles/config/settings/myaliases
+[ -f ~/.aliases_local ] && source ~/.aliases_local
