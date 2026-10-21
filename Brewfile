@@ -1,0 +1,5 @@
+brew "neovim"
+brew "tmux"
+brew "ghq"
+brew "direnv"
+brew "mise"
